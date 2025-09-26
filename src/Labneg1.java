@@ -1,11 +1,18 @@
 //Lab -1 Part 1
 
-import java.util.Arrays;
+import java.sql.SQLOutput;
+import java.util.Arrays; //for part 1
+
+//imports for part 2
+import java.io.*;
+import java.util.Formatter;
+import java.util.Scanner;
+
 
 public class Labneg1 {
     public static void main(String[] args) {
 
-        System.out.print("Part 1\n\n\n");
+        System.out.print("\n\nPart 1: Receipts\n\n");
 
         /* WE CAN LIST PRICES AND QUANTITIES INDIVIDUALLY AS SO...
         // Define inventory prices
@@ -70,14 +77,53 @@ public class Labneg1 {
             System.out.printf("\t%50s\t%15.2f\n", "Subtotal:", grandSubtotal);
             System.out.printf("\t%50s\t%15.2f\n", "Sales Tax (" + (salesTax * 100) + "%):", salesTaxAmount);
             System.out.printf("\t%50s\t%15.2f\n", "TOTAL:", grandTotal);
-            System.out.print("---------------------------------------------------------------------\n");;
+            System.out.print("---------------------------------------------------------------------\n");
+            ;
         }
 
-        //Part 2: Find Fahrenheit of Centigrade && Centigrade of Fahrenheit
+        // Part 2: Find Fahrenheit of Centigrade && vice versa
+        System.out.printf("\n\n\n");
+        System.out.println("Part 2: F to C / C to F Conversion.\n");
+        double number; //possibly redundant.
 
-        System.out.print("Part 2\n\n\n");
+        // Menu has to stay running until given permission to quit. Utilizing while(true) to sustain with a break
+        // after forced quit.
+        // Program is 2-step: Unit selection then number conversion. All encased in if-elif loop.
+        Scanner inputM = new Scanner(System.in); //inputM will be universal variable
 
+        while (true) {
+            System.out.println("Type C to find Degrees in Centigrade. Type F to find Degrees in Fahrenheit. Type Q " +
+                    "to quit program.");
+            String choice = inputM.next().toUpperCase(); // Read ONCE and store
 
+            if (choice.equals("F")) {
+                System.out.println("Enter temperature in Centigrade: ");
+                // Scanner inputc = new Scanner(System.in); <-- originally in but is redundant. switched from inputc,
+                // inputf to universal unputM
+                float deg = inputM.nextFloat();
+                // Conversion calculation
+                deg = (float) (deg * (180.00 / 100.0));
+                deg = deg + 32;
+
+                System.out.println("Your temperature in Fahrenheit: " + deg);
+            }
+
+            else if (choice.equals("C")) {
+                System.out.println("Enter temperature in Fahrenheit: ");
+                // Scanner inputc = new Scanner(System.in); <-- originally in but is redundant. switched from inputc,
+                // inputf to universal unputM
+                float deg = inputM.nextFloat();
+                // Conversion calculation
+                deg = (float) (deg - 32.0);
+                deg = deg * (100f / 180f);
+
+                System.out.println("Your temperature in Centigrade: " + deg);
+            }
+            // For manual quit.
+            else if (choice.equals("Q")) {
+                System.out.println("Program quitting. Done.");
+                break;
+            }
+        }
     }
 }
-
