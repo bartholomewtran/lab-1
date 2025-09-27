@@ -119,7 +119,7 @@ public class Labneg1 {
                 deg = (float) (deg * (180.00 / 100.0));
                 deg = deg + 32;
 
-                System.out.println("Your temperature in Fahrenheit: " + deg);
+                System.out.println("Your temperature in Fahrenheit: " + deg + "°F");
             }
 
             else if (choice.equals("C")) {
@@ -131,7 +131,7 @@ public class Labneg1 {
                 deg = (float) (deg - 32.0);
                 deg = deg * (100f / 180f);
 
-                System.out.println("Your temperature in Centigrade: " + deg);
+                System.out.println("Your temperature in Centigrade: " + deg + "°C");
             }
             // For manual quit.
             else if (choice.equals("Q")) {
