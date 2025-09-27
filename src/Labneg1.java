@@ -56,6 +56,7 @@ public class Labneg1 {
 
         System.out.printf("\n\n"); // Formatting
         System.out.printf("-------------------------------------------------------------------------------\n"); // Formatting
+        
         double grandSubtotal = 0.00;
         // Print header
         System.out.printf("\t%2s\t%-30s\t%15s\t%15s\n", "QTY", "Description", "Unit Price", "Total Price\n");
@@ -79,9 +80,9 @@ public class Labneg1 {
         float grandTotal = (float) (grandSubtotal + salesTaxAmount);
 
         // Print receipt values
-        System.out.printf("\n\t%50s\t%15.2f\n", "Subtotal:", grandSubtotal);
+        System.out.printf("\n\t%50s\t%15.2f\n", "Subtotal: $", grandSubtotal);
         System.out.printf("\t%50s\t%15.2f\n", "Sales Tax (" + (salesTax * 100) + "%):", salesTaxAmount);
-        System.out.printf("\t%50s\t%15.2f\n", "TOTAL:", grandTotal);
+        System.out.printf("\t%50s\t%15.2f\n", "TOTAL: $", grandTotal);
 
         // The following are for formatting
         System.out.printf("-------------------------------------------------------------------------------\n");
