@@ -30,9 +30,8 @@ different Java concepts can be observed throughout the program.
 Program returns a formatted receipt of their total cost including sales tax.
 
  */
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.Arrays; //for part 1
+
 
 
 public class LabN1pt1 {
