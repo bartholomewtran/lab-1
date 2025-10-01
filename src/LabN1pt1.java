@@ -171,9 +171,19 @@ would want to know.
 
 OUTPUT
 
-The following is the output from the terminal showing the printed receipt.
+The following is the output from the terminal showing the printed receipt:
+
 
 With data output: Set 1 -> 2 1 4 1 2
+
+To create a receipt, press R. To quit program, press Q:
+R
+How many TVs were sold? 2
+How many VCRs were sold? 1
+How many Remote Controllers were sold? 4
+How many CD Players were sold? 1
+How many Tape Recorders were sold? 2
+
 
 -------------------------------------------------------------------------------
 	QTY	Description                   	     Unit Price	   Total Price
@@ -189,21 +199,34 @@ With data output: Set 1 -> 2 1 4 1 2
 	                                          TOTAL: $	        1906.07
 -------------------------------------------------------------------------------
 
+
+
 With data output: Set 2 -> 3 0 2 0 21
+
+To create a receipt, press R. To quit program, press Q:
+R
+How many TVs were sold? 3
+How many VCRs were sold? 0
+How many Remote Controllers were sold? 2
+How many CD Players were sold? 0
+How many Tape Recorders were sold? 21
+
 
 -------------------------------------------------------------------------------
 	QTY	Description                   	     Unit Price	   Total Price
 
-	 2	TV                            	         400.00	         800.00
+	 3	TV                            	         400.00	        1200.00
 	 0	VCR                           	         220.00	           0.00
-	 3	Remote Controller             	          35.20	         105.60
+	 2	Remote Controller             	          35.20	          70.40
 	 0	CD Player                     	         300.00	           0.00
 	21	Tape Recorder                 	         150.00	        3150.00
 
-	                                       Subtotal: $	        4055.60
-	                                Sales Tax (8.25%):	         334.59
-	                                          TOTAL: $	        4390.19
+	                                       Subtotal: $	        4420.40
+	                                Sales Tax (8.25%):	         364.68
+	                                          TOTAL: $	        4785.08
 -------------------------------------------------------------------------------
+
+
 
  */
 
